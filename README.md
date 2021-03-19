@@ -22,3 +22,18 @@ To start this project just write the command npm start , which will create the f
 Go to that folder , in the bottom you will find the file with name plus91.exe which is our required file.
 
 So , now just click on the .exe file to open it.
+
+
+STEPS TO DOWNLOAD THE PROJECT:- ...
+
+	step 1 - download the project either clone it or download the zip file
+	step 2 - open in the code editor and navigate to that folder.
+	step 3 - write the command in the terminal npm install or npm i to install all the dependencies
+	step 4 - write the command npm start
+	after step 4 a new folder will be created with name => "plus91--so on..".
+	step 5 - open that folder
+	step 6 - In the bottom , you will find the file with the name => "plus91.exe"
+	step 7 - just click on that file and you will see the output .
+ 
+ 
+ 
