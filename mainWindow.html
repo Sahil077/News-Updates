@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="./css/mainWindow.css">
+
+</head>
+<body>
+    <h1> <u> Daily Reports</u></h1>
+    
+   
+
+    <ul></ul>
+    
+    
+    
+
+
+
+
+        <script>
+             const electron = require('electron');
+             const {ipcRenderer} = electron;
+
+          ipcRenderer.on('start-session', (event, arg) => {
+           
+            var ul = document.querySelector("ul");
+
+              for (var i = 0; i < arg.length; i++) {
+             //   console.log(arg.length)
+                var title = arg[i].title;
+                var content = arg[i].content;
+                var date_time = arg[i].time
+                if(content.length > 100){
+                  contentData = content.substring(0,500);
+                  console.log(contentData)
+                } 
+                var listItem = document.createElement("li");
+                
+                var h3 = document.createElement("h3");
+                var h5 = document.createElement("h5");
+                var h6 = document.createElement("h6");
+
+                h3.textContent = title;
+                h6.textContent = date_time;
+                h5.innerHTML = contentData +  " more...";
+                
+                listItem.appendChild(h3);
+                listItem.appendChild(h6);
+                listItem.appendChild(h5);
+                ul.appendChild(listItem);
+              } 
+          })
+      
+
+        </script>
+
+
+
+    
+
+
+</body>
+</html>
